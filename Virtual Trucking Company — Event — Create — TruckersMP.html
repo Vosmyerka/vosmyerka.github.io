@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://truckersmp.com/vtc/48336/events/create -->
+<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>            Virtual Trucking Company — Event — Create —
+     TruckersMP</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="csrf-token" content="zhkqjyYplUGoWRyR8gYzZUHmBBAnge6X5p6GdWSz">
+<script>window.Laravel = {"csrfToken":"zhkqjyYplUGoWRyR8gYzZUHmBBAnge6X5p6GdWSz"}</script>
+<meta name="google-site-verification" content="_54867MO6E0R51YZTqKfpoLwQi6--vXi0a5uWomLTf4">
+<meta name="facebook-domain-verification" content="2pcwzfpe30g6ghniqsnxqbmodqp85w">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://truckersmp.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://truckersmp.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://truckersmp.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://truckersmp.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://truckersmp.com/assets/icons/safari-pinned-tab.svg" color="#b92025">
+<link rel="shortcut icon" href="https://truckersmp.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#222222">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#222222">
+<script defer="" type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/f.txt"></script>
+<script defer="" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/js"></script>
+<script defer="" type="text/javascript">
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 750
+          });
+          gtag('set', 'ads_data_redaction', true);
+          gtag('config', 'UA-64357218-3');
+        </script>
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/sky-forms.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/custom-sky-forms.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/flatpickr.min.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/dark.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/easymde.min.css" integrity="sha256-Cu13luD8fDjF0H1zX6zM2yK42o2Bn93WkyYT7Qk7o4g=" crossorigin="anonymous">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/easymde.dark.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/app.css">
+<link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/font-awesome.min.css"><link rel="stylesheet" href="./Virtual Trucking Company — Event — Create — TruckersMP_files/font-awesome.min.css"><script type="text/javascript" data-name="TokenSigning">(function() {
+    // Promises
+    var _eid_promises = {};
+    // Turn the incoming message from extension
+    // into pending Promise resolving
+    window.addEventListener("message", function(event) {
+        if (event.source !== window) return;
+        if (event.data.src && (event.data.src === "background.js")) {
+            console.log("Page received: ");
+            console.log(event.data);
+            // Get the promise
+            if (event.data.nonce) {
+                var p = _eid_promises[event.data.nonce];
+                // resolve
+                if (event.data.result === "ok") {
+                    if (event.data.signature !== undefined) {
+                        p.resolve({hex: event.data.signature});
+                    } else if (event.data.version !== undefined) {
+                        p.resolve(event.data.extension + "/" + event.data.version);
+                    } else if (event.data.cert !== undefined) {
+                        p.resolve({hex: event.data.cert});
+                    } else {
+                        console.log("No idea how to handle message");
+                        console.log(event.data);
+                    }
+                } else {
+                    // reject
+                    p.reject(new Error(event.data.result));
+                }
+                delete _eid_promises[event.data.nonce];
+            } else {
+                console.log("No nonce in event msg");
+            }
+        }
+    }, false);
+
+    window.TokenSigning = function() {
+        function nonce() {
+            var val = "";
+            var hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+
+        function messagePromise(msg) {
+            return new Promise(function(resolve, reject) {
+                // amend with necessary metadata
+                msg["nonce"] = nonce();
+                msg["src"] = "page.js";
+                // send message
+                window.postMessage(msg, "*");
+                // and store promise callbacks
+                _eid_promises[msg.nonce] = {
+                    resolve: resolve,
+                    reject: reject
+                };
+            });
+        }
+        this.getCertificate = function(options) {
+            var msg = {type: "CERT", lang: options.lang, filter: options.filter};
+            console.log("getCertificate()");
+            return messagePromise(msg);
+        };
+        this.sign = function(cert, hash, options) {
+            var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info};
+            console.log("sign()");
+            return messagePromise(msg);
+        };
+        this.getVersion = function() {
+            console.log("getVersion()");
+            return messagePromise({
+                type: "VERSION"
+            });
+        };
+    };
+})();</script></head>
+<body class="dark">
+<div class="wrapper">
+
+<div class="header">
+<div class="container">
+
+<a class="logo" href="https://truckersmp.com/">
+<img class="mplogo" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/truckersmp-logo-sm.png" alt="TruckersMP Logo">
+</a>
+
+
+<div class="topbar">
+<ul class="loginbar pull-right">
+<li class="hide-tiny">
+<a href="https://truckersmp.com/status">
+<span style="color: #72c02c;">Players Trucking:</span> 3,141
+</a>
+</li>
+<li class="topbar-devider hide-tiny"></li>
+<li class="hide-tiny">
+<a href="https://truckersmp.com/profile/settings?tab=site" data-toggle="tooltip" data-placement="bottom" data-title="Click to change website timezone" data-original-title="" title="">
+<span>Current Timezone:</span> UTC
+</a>
+</li>
+<li class="topbar-devider hide-tiny"></li>
+<li class="hoverSelector">
+<span class="label label-default">
+Vosmyerka
+<i class="fas fa-angle-down"></i>
+</span>
+<ul class="languages accountMenu hoverSelectorBlock">
+<li><a href="https://truckersmp.com/user/2870509">Profile</a></li>
+<li><a href="https://truckersmp.com/vtc/48336-mileageriot">My VTC</a></li>
+<li><a href="https://truckersmp.com/profile/settings">Settings</a></li>
+<li><a href="https://truckersmp.com/support/tickets">Support</a></li>
+<li><a href="https://truckersmp.com/reports">Reports</a></li>
+<li><a href="https://truckersmp.com/feedback/user/2870509">Feedback</a></li>
+<li><a href="https://truckersmp.com/appeals">Appeal Ban</a></li>
+<li><a href="https://truckersmp.com/recruitment">Recruitment</a></li>
+<li><a href="https://truckersmp.com/event-request">Event Request</a></li>
+</ul>
+</li>
+<li class="topbar-devider"></li>
+<li><a href="https://truckersmp.com/auth/logout">Logout</a></li>
+</ul>
+</div>
+
+
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="fas fa-bars"></span>
+</button>
+
+</div>
+
+<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+<div class="container">
+<ul class="nav navbar-nav">
+
+<li>
+<a href="https://truckersmp.com/download">Download</a>
+</li>
+
+
+<li>
+<a href="https://forum.truckersmp.com/">Forum</a>
+</li>
+
+
+<li>
+<a href="https://truckersmp.com/events">Events</a>
+</li>
+
+
+<li>
+<a href="https://truckersmp.com/vtc">VTC</a>
+</li>
+
+
+<li class="dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+Guides &amp; Support
+</a>
+<ul class="dropdown-menu">
+<li><a href="https://truckersmp.com/knowledge-base">Knowledge Base</a></li>
+<li><a href="https://truckersmp.com/support">Support System</a></li>
+</ul>
+</li>
+
+
+<li class="dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+Information
+</a>
+<ul class="dropdown-menu">
+<li><a href="https://truckersmp.com/blog">News</a></li>
+<li><a href="https://truckersmp.com/poll-survey">Polls &amp; Surveys</a></li>
+<li><a href="https://truckersmp.com/status">Server Status</a></li>
+<li><a href="https://map.truckersmp.com/" target="_blank">Map &nbsp;<i class="fas fa-external-link"></i></a></li>
+<li><a href="https://traffic.krashnz.com/" target="_blank">Traffic &nbsp;<i class="fas fa-external-link"></i></a></li>
+<li><a href="https://truckersmp.sellfy.store/" target="_blank">Merch Store &nbsp;<i class="fas fa-external-link"></i></a></li>
+<li><a href="https://truckersmp.com/team">Meet the Team</a></li>
+<li><a href="https://truckersmp.com/retired-staff">Retired Staff</a></li>
+<li><a href="https://truckersmp.com/rules">Rules</a></li>
+<li><a href="https://truckersmp.com/code-of-conduct">Code of Conduct</a></li>
+<li></li>
+<li><a href="https://truckersmp.com/patreon-wall-of-fame">Patreon Wall of Fame</a></li>
+<li><a href="https://truckersmp.com/contributors">Community Contributors</a></li>
+<li><a href="https://truckersmp.com/developers/api">API Documentation</a></li>
+</ul>
+</li>
+
+
+<li>
+<i class="search fas fa-search search-btn"></i>
+<div class="search-open">
+<form method="get" action="https://truckersmp.com/user/search">
+<div class="input-group animated fadeInDown">
+<input type="text" name="search" class="form-control" placeholder="Search for a player...">
+<span class="input-group-btn">
+<button class="btn-u" type="submit">Go</button>
+</span>
+</div>
+</form>
+</div>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+
+<div class="breadcrumbs">
+<div class="container">
+<h1 class="pull-left">Create Event</h1>
+<ul class="pull-right breadcrumb">
+<li><a href="https://truckersmp.com/">Home</a></li>
+<li><a href="https://truckersmp.com/vtc">VTC</a></li>
+<li><a href="https://truckersmp.com/vtc/48336-mileageriot">Mileage Riot</a></li>
+<li><a href="https://truckersmp.com/vtc/48336-mileageriot/events/admin">Events</a></li>
+<li class="active">Create</li>
+</ul>
+</div>
+</div>
+<div class="container content">
+<div class="p-2">
+<form action="https://truckersmp.com/vtc/48336/events" id="event-form" method="post" class="sky-form" enctype="multipart/form-data">
+<input type="hidden" name="_token" value="zhkqjyYplUGoWRyR8gYzZUHmBBAnge6X5p6GdWSz">
+<input type="hidden" id="eventID" value="">
+<input type="hidden" name="eventRequestExist" value="">
+<div class="row">
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label for="eventGame">
+Game
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<select name="game" id="eventGame" class="form-control">
+<option value="ets2">
+Euro Truck Simulator 2
+</option>
+<option value="ats">
+American Truck Simulator
+</option>
+<option value="promods-ets2">
+Euro Truck Simulator 2 ProMods
+</option>
+</select>
+</div>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label for="eventServer">
+Server
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<select name="server" id="eventServer" class="form-control" data-select="0"><option value="">To be determined</option><option value="4">Simulation 1</option><option value="30">[US] Simulation</option><option value="35">[SGP] Simulation</option><option value="8">Arcade</option></select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="eventName">
+Event Name
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<input type="text" name="name" id="eventName" class="form-control" value="" min="6" max="64" required="">
+</div>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventStartDate">
+Start Date &amp; Time
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<input type="hidden" name="startDate" id="eventStartDate" class="form-control flatpickr-input" value="" required=""><input class="form-control flatpickr-input form-control input" placeholder="" required="" tabindex="0" type="text" readonly="readonly">
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventStartCity">
+Start City
+</label>
+<select name="startCity" id="eventStartCity" class="form-control" data-select="0"><option value="">Other</option><option value="1001">A Coruña</option><option value="24">Aalborg</option><option value="217">Aberdeen</option><option value="59">Ajaccio</option><option value="978">Albacete</option><option value="1000">Algeciras</option><option value="995">Almaraz</option><option value="982">Almería</option><option value="147">Amsterdam</option><option value="117">Ancona</option><option value="172">Bacău</option><option value="1002">Badajoz</option><option value="991">Bailén</option><option value="187">Banská Bystrica</option><option value="967">Barcelona</option><option value="126">Bari</option><option value="55">Bastia</option><option value="954">Bayonne</option><option value="1117">Beja</option><option value="152">Bergen</option><option value="88">Berlin</option><option value="206">Bern</option><option value="1149">Bialystok</option><option value="163">Białystok</option><option value="977">Bilbao</option><option value="220">Birmingham</option><option value="113">Bologna</option><option value="47">Bonifacio</option><option value="77">Bordeaux</option><option value="63">Bourges</option><option value="170">Brașov</option><option value="186">Bratislava</option><option value="97">Bremen</option><option value="79">Brest</option><option value="21">Brno</option><option value="1146">Brno</option><option value="8">Brussels</option><option value="173">Bucharest</option><option value="103">Budapest</option><option value="19">Burgas</option><option value="981">Burgos</option><option value="131">Cagliari</option><option value="54">Calais</option><option value="176">Călărași</option><option value="57">Calvi</option><option value="214">Cambridge</option><option value="226">Cardiff</option><option value="222">Carlisle</option><option value="120">Cassino</option><option value="124">Catania</option><option value="125">Catanzaro</option><option value="177">Cernavodă</option><option value="989">Ciudad Real</option><option value="70">Civaux</option><option value="64">Clermont</option><option value="1113">Clermont-Ferrand</option><option value="166">Cluj-Napoca</option><option value="958">Coimbra</option><option value="99">Cologne</option><option value="178">Constanța</option><option value="28">Copenhagen</option><option value="996">Córdoba</option><option value="962">Cortiçadas de Lavre</option><option value="168">Craiova</option><option value="136">Daugavpils</option><option value="105">Debrecen</option><option value="49">Dijon</option><option value="98">Dortmund</option><option value="212">Dover</option><option value="89">Dresden</option><option value="100">Duisburg</option><option value="101">Düsseldorf</option><option value="223">Edinburgh</option><option value="1150">Edirne</option><option value="208">Edirne</option><option value="986">El Ejido</option><option value="82">Erfurt</option><option value="29">Esbjerg</option><option value="960">Evora</option><option value="965">Faro</option><option value="211">Felixstowe</option><option value="114">Florence</option><option value="93">Frankfurt</option><option value="1115">Frankfurt am Main</option><option value="26">Frederikshavn</option><option value="175">Galați</option><option value="157">Gdańsk</option><option value="27">Gedser</option><option value="207">Geneva</option><option value="110">Genoa</option><option value="987">Gijón</option><option value="225">Glasgow</option><option value="73">Golfech</option><option value="189">Gothenburg</option><option value="992">Granada</option><option value="5">Graz</option><option value="215">Grimsby</option><option value="146">Groningen</option><option value="956">Guarda</option><option value="92">Hamburg</option><option value="91">Hanover</option><option value="192">Helsingborg</option><option value="41">Helsinki</option><option value="25">Hirtshals</option><option value="1004">Huelva</option><option value="167">Hunedoara</option><option value="174">Iași</option><option value="1">Innsbruck</option><option value="1152">İstanbul</option><option value="210">İstanbul</option><option value="193">Jönköping</option><option value="180">Kaliningrad</option><option value="198">Kalmar</option><option value="204">Kapellskär</option><option value="14">Karlovo</option><option value="194">Karlskrona</option><option value="90">Kassel</option><option value="156">Katowice</option><option value="141">Kaunas</option><option value="84">Kiel</option><option value="1111">Klagenfurt am Wörthersee</option><option value="138">Klaipėda</option><option value="188">Košice</option><option value="44">Kotka</option><option value="45">Kouvola</option><option value="11">Kozloduy</option><option value="158">Kraków</option><option value="150">Kristiansand</option><option value="34">Kunda</option><option value="58">L'Île-Rousse</option><option value="76">La Rochelle</option><option value="955">Lacq</option><option value="43">Lahti</option><option value="68">Le Havre</option><option value="69">Le Mans</option><option value="85">Leipzig</option><option value="988">León</option><option value="7">Liège</option><option value="132">Liepāja</option><option value="52">Lille</option><option value="71">Limoges</option><option value="196">Linköping</option><option value="3">Linz</option><option value="966">Lisbon</option><option value="224">Liverpool</option><option value="130">Livorno</option><option value="969">Lleida</option><option value="213">London</option><option value="42">Loviisa</option><option value="162">Lublin</option><option value="185">Luga</option><option value="145">Luxembourg</option><option value="50">Lyon</option><option value="159">Łódź</option><option value="984">Madrid</option><option value="86">Magdeburg</option><option value="997">Málaga</option><option value="190">Malmö</option><option value="221">Manchester</option><option value="179">Mangalia</option><option value="94">Mannheim</option><option value="61">Marseille</option><option value="139">Mažeikiai</option><option value="985">Mengíbar</option><option value="122">Messina</option><option value="48">Metz</option><option value="108">Milan</option><option value="65">Montpellier</option><option value="81">Munich</option><option value="979">Murcia</option><option value="36">Naantali</option><option value="75">Nantes</option><option value="121">Naples</option><option value="35">Narva</option><option value="993">Navia</option><option value="216">Newcastle</option><option value="1120">Newcastle upon Tyne</option><option value="60">Nice</option><option value="80">Nuremberg</option><option value="202">Nynäshamn</option><option value="998">O Barco</option><option value="23">Odense</option><option value="109">Olbia</option><option value="964">Olhão</option><option value="38">Olkiluoto</option><option value="160">Olsztyn</option><option value="197">Örebro</option><option value="149">Oslo</option><option value="96">Osnabrück</option><option value="22">Ostrava</option><option value="1147">Ostrava</option><option value="30">Paldiski</option><option value="118">Palermo</option><option value="66">Paluel</option><option value="975">Pamplona</option><option value="142">Panevėžys</option><option value="53">Paris</option><option value="129">Parma</option><option value="31">Pärnu</option><option value="102">Pécs</option><option value="10">Pernik</option><option value="119">Pescara</option><option value="12">Pirdop</option><option value="171">Pitești</option><option value="13">Pleven</option><option value="15">Plovdiv</option><option value="228">Plymouth</option><option value="959">Ponte de Sor</option><option value="37">Pori</option><option value="972">Port de Sagunt</option><option value="957">Porto</option><option value="56">Porto-Vecchio</option><option value="155">Poznań</option><option value="1145">Prague</option><option value="183">Pskov</option><option value="990">Puertollano</option><option value="51">Reims</option><option value="74">Rennes</option><option value="165">Reșița</option><option value="137">Rēzekne</option><option value="134">Riga</option><option value="116">Rome</option><option value="78">Roscoff</option><option value="87">Rostock</option><option value="148">Rotterdam</option><option value="16">Ruse</option><option value="1118">Saint Petersburg</option><option value="1112">Saint-Alban-du-Rhône</option><option value="1114">Saint-Laurent</option><option value="994">Salamanca</option><option value="2">Salzburg</option><option value="980">Santander</option><option value="111">Sassari</option><option value="961">Setúbal</option><option value="999">Seville</option><option value="218">Sheffield</option><option value="140">Šiauliai</option><option value="963">Sines</option><option value="199">Södertälje</option><option value="9">Sofia</option><option value="1119">Soria</option><option value="181">Sosnovy Bor</option><option value="219">Southampton</option><option value="67">St.Laurent</option><option value="184">St.Petersburg</option><option value="151">Stavanger</option><option value="201">Stockholm</option><option value="46">Strasbourg</option><option value="95">Stuttgart</option><option value="128">Suzzara</option><option value="227">Swansea</option><option value="153">Szczecin</option><option value="104">Szeged</option><option value="32">Tallinn</option><option value="40">Tampere</option><option value="127">Taranto</option><option value="169">Târgu Mureș</option><option value="968">Tarragona</option><option value="33">Tartu</option><option value="1151">Tekirdağ</option><option value="209">Tekirdağ</option><option value="115">Terni</option><option value="976">Teruel</option><option value="164">Timișoara</option><option value="72">Toulouse</option><option value="83">Travemünde</option><option value="191">Trelleborg</option><option value="1128">TruckersMP HQ</option><option value="112">Turin</option><option value="39">Turku</option><option value="203">Uppsala</option><option value="144">Utena</option><option value="974">Valencia</option><option value="983">Valladolid</option><option value="135">Valmiera</option><option value="970">Vandellòs</option><option value="18">Varna</option><option value="200">Västerås</option><option value="195">Växjö</option><option value="17">Veliko Tarnovo</option><option value="107">Venice</option><option value="133">Ventspils</option><option value="106">Verona</option><option value="6">Vienna</option><option value="1003">Vigo</option><option value="1116">Villa San Giovanni</option><option value="973">Villarreal</option><option value="123">VillaS.Giovanni</option><option value="143">Vilnius</option><option value="182">Vyborg</option><option value="161">Warsaw</option><option value="1148">Werlte</option><option value="154">Wrocław</option><option value="971">Zaragoza</option><option value="205">Zürich</option></select>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventStartLocation">
+Start Location
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<input type="text" name="startLocation" id="eventStartLocation" class="form-control" value="" min="4" max="64" required="">
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventType">
+Event Type
+</label>
+<select name="eventType" id="eventType" class="form-control">
+<option value="convoy">Convoy</option>
+<option value="truck_show">Truckfest</option>
+<option value="truck_show_and_convoy">Truckfest And Convoy</option>
+</select>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventEndCity">
+End City
+</label>
+<select name="endCity" id="eventEndCity" class="form-control" data-select="0"><option value="">Other</option><option value="1001">A Coruña</option><option value="24">Aalborg</option><option value="217">Aberdeen</option><option value="59">Ajaccio</option><option value="978">Albacete</option><option value="1000">Algeciras</option><option value="995">Almaraz</option><option value="982">Almería</option><option value="147">Amsterdam</option><option value="117">Ancona</option><option value="172">Bacău</option><option value="1002">Badajoz</option><option value="991">Bailén</option><option value="187">Banská Bystrica</option><option value="967">Barcelona</option><option value="126">Bari</option><option value="55">Bastia</option><option value="954">Bayonne</option><option value="1117">Beja</option><option value="152">Bergen</option><option value="88">Berlin</option><option value="206">Bern</option><option value="1149">Bialystok</option><option value="163">Białystok</option><option value="977">Bilbao</option><option value="220">Birmingham</option><option value="113">Bologna</option><option value="47">Bonifacio</option><option value="77">Bordeaux</option><option value="63">Bourges</option><option value="170">Brașov</option><option value="186">Bratislava</option><option value="97">Bremen</option><option value="79">Brest</option><option value="21">Brno</option><option value="1146">Brno</option><option value="8">Brussels</option><option value="173">Bucharest</option><option value="103">Budapest</option><option value="19">Burgas</option><option value="981">Burgos</option><option value="131">Cagliari</option><option value="54">Calais</option><option value="176">Călărași</option><option value="57">Calvi</option><option value="214">Cambridge</option><option value="226">Cardiff</option><option value="222">Carlisle</option><option value="120">Cassino</option><option value="124">Catania</option><option value="125">Catanzaro</option><option value="177">Cernavodă</option><option value="989">Ciudad Real</option><option value="70">Civaux</option><option value="64">Clermont</option><option value="1113">Clermont-Ferrand</option><option value="166">Cluj-Napoca</option><option value="958">Coimbra</option><option value="99">Cologne</option><option value="178">Constanța</option><option value="28">Copenhagen</option><option value="996">Córdoba</option><option value="962">Cortiçadas de Lavre</option><option value="168">Craiova</option><option value="136">Daugavpils</option><option value="105">Debrecen</option><option value="49">Dijon</option><option value="98">Dortmund</option><option value="212">Dover</option><option value="89">Dresden</option><option value="100">Duisburg</option><option value="101">Düsseldorf</option><option value="223">Edinburgh</option><option value="1150">Edirne</option><option value="208">Edirne</option><option value="986">El Ejido</option><option value="82">Erfurt</option><option value="29">Esbjerg</option><option value="960">Evora</option><option value="965">Faro</option><option value="211">Felixstowe</option><option value="114">Florence</option><option value="93">Frankfurt</option><option value="1115">Frankfurt am Main</option><option value="26">Frederikshavn</option><option value="175">Galați</option><option value="157">Gdańsk</option><option value="27">Gedser</option><option value="207">Geneva</option><option value="110">Genoa</option><option value="987">Gijón</option><option value="225">Glasgow</option><option value="73">Golfech</option><option value="189">Gothenburg</option><option value="992">Granada</option><option value="5">Graz</option><option value="215">Grimsby</option><option value="146">Groningen</option><option value="956">Guarda</option><option value="92">Hamburg</option><option value="91">Hanover</option><option value="192">Helsingborg</option><option value="41">Helsinki</option><option value="25">Hirtshals</option><option value="1004">Huelva</option><option value="167">Hunedoara</option><option value="174">Iași</option><option value="1">Innsbruck</option><option value="1152">İstanbul</option><option value="210">İstanbul</option><option value="193">Jönköping</option><option value="180">Kaliningrad</option><option value="198">Kalmar</option><option value="204">Kapellskär</option><option value="14">Karlovo</option><option value="194">Karlskrona</option><option value="90">Kassel</option><option value="156">Katowice</option><option value="141">Kaunas</option><option value="84">Kiel</option><option value="1111">Klagenfurt am Wörthersee</option><option value="138">Klaipėda</option><option value="188">Košice</option><option value="44">Kotka</option><option value="45">Kouvola</option><option value="11">Kozloduy</option><option value="158">Kraków</option><option value="150">Kristiansand</option><option value="34">Kunda</option><option value="58">L'Île-Rousse</option><option value="76">La Rochelle</option><option value="955">Lacq</option><option value="43">Lahti</option><option value="68">Le Havre</option><option value="69">Le Mans</option><option value="85">Leipzig</option><option value="988">León</option><option value="7">Liège</option><option value="132">Liepāja</option><option value="52">Lille</option><option value="71">Limoges</option><option value="196">Linköping</option><option value="3">Linz</option><option value="966">Lisbon</option><option value="224">Liverpool</option><option value="130">Livorno</option><option value="969">Lleida</option><option value="213">London</option><option value="42">Loviisa</option><option value="162">Lublin</option><option value="185">Luga</option><option value="145">Luxembourg</option><option value="50">Lyon</option><option value="159">Łódź</option><option value="984">Madrid</option><option value="86">Magdeburg</option><option value="997">Málaga</option><option value="190">Malmö</option><option value="221">Manchester</option><option value="179">Mangalia</option><option value="94">Mannheim</option><option value="61">Marseille</option><option value="139">Mažeikiai</option><option value="985">Mengíbar</option><option value="122">Messina</option><option value="48">Metz</option><option value="108">Milan</option><option value="65">Montpellier</option><option value="81">Munich</option><option value="979">Murcia</option><option value="36">Naantali</option><option value="75">Nantes</option><option value="121">Naples</option><option value="35">Narva</option><option value="993">Navia</option><option value="216">Newcastle</option><option value="1120">Newcastle upon Tyne</option><option value="60">Nice</option><option value="80">Nuremberg</option><option value="202">Nynäshamn</option><option value="998">O Barco</option><option value="23">Odense</option><option value="109">Olbia</option><option value="964">Olhão</option><option value="38">Olkiluoto</option><option value="160">Olsztyn</option><option value="197">Örebro</option><option value="149">Oslo</option><option value="96">Osnabrück</option><option value="22">Ostrava</option><option value="1147">Ostrava</option><option value="30">Paldiski</option><option value="118">Palermo</option><option value="66">Paluel</option><option value="975">Pamplona</option><option value="142">Panevėžys</option><option value="53">Paris</option><option value="129">Parma</option><option value="31">Pärnu</option><option value="102">Pécs</option><option value="10">Pernik</option><option value="119">Pescara</option><option value="12">Pirdop</option><option value="171">Pitești</option><option value="13">Pleven</option><option value="15">Plovdiv</option><option value="228">Plymouth</option><option value="959">Ponte de Sor</option><option value="37">Pori</option><option value="972">Port de Sagunt</option><option value="957">Porto</option><option value="56">Porto-Vecchio</option><option value="155">Poznań</option><option value="1145">Prague</option><option value="183">Pskov</option><option value="990">Puertollano</option><option value="51">Reims</option><option value="74">Rennes</option><option value="165">Reșița</option><option value="137">Rēzekne</option><option value="134">Riga</option><option value="116">Rome</option><option value="78">Roscoff</option><option value="87">Rostock</option><option value="148">Rotterdam</option><option value="16">Ruse</option><option value="1118">Saint Petersburg</option><option value="1112">Saint-Alban-du-Rhône</option><option value="1114">Saint-Laurent</option><option value="994">Salamanca</option><option value="2">Salzburg</option><option value="980">Santander</option><option value="111">Sassari</option><option value="961">Setúbal</option><option value="999">Seville</option><option value="218">Sheffield</option><option value="140">Šiauliai</option><option value="963">Sines</option><option value="199">Södertälje</option><option value="9">Sofia</option><option value="1119">Soria</option><option value="181">Sosnovy Bor</option><option value="219">Southampton</option><option value="67">St.Laurent</option><option value="184">St.Petersburg</option><option value="151">Stavanger</option><option value="201">Stockholm</option><option value="46">Strasbourg</option><option value="95">Stuttgart</option><option value="128">Suzzara</option><option value="227">Swansea</option><option value="153">Szczecin</option><option value="104">Szeged</option><option value="32">Tallinn</option><option value="40">Tampere</option><option value="127">Taranto</option><option value="169">Târgu Mureș</option><option value="968">Tarragona</option><option value="33">Tartu</option><option value="1151">Tekirdağ</option><option value="209">Tekirdağ</option><option value="115">Terni</option><option value="976">Teruel</option><option value="164">Timișoara</option><option value="72">Toulouse</option><option value="83">Travemünde</option><option value="191">Trelleborg</option><option value="1128">TruckersMP HQ</option><option value="112">Turin</option><option value="39">Turku</option><option value="203">Uppsala</option><option value="144">Utena</option><option value="974">Valencia</option><option value="983">Valladolid</option><option value="135">Valmiera</option><option value="970">Vandellòs</option><option value="18">Varna</option><option value="200">Västerås</option><option value="195">Växjö</option><option value="17">Veliko Tarnovo</option><option value="107">Venice</option><option value="133">Ventspils</option><option value="106">Verona</option><option value="6">Vienna</option><option value="1003">Vigo</option><option value="1116">Villa San Giovanni</option><option value="973">Villarreal</option><option value="123">VillaS.Giovanni</option><option value="143">Vilnius</option><option value="182">Vyborg</option><option value="161">Warsaw</option><option value="1148">Werlte</option><option value="154">Wrocław</option><option value="971">Zaragoza</option><option value="205">Zürich</option></select>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label for="eventEndLocation">
+End Location
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<input type="text" name="endLocation" id="eventEndLocation" class="form-control" value="" min="4" max="64" required="">
+</div>
+</div>
+<div class="col-md-4 col-sm-12 dlc-box">
+<div class="form-group">
+<label for="eventEndCity" data-toggle="tooltip" title="" data-original-title="Note: Hold the CTRL/CMD key to select multiple DLCs.">
+Required DLC <i class="fas fa-info-circle text-info"></i>
+</label>
+<select name="dlcs[]" id="eventDLCs" class="form-control" multiple="multiple"><option value=""></option><option value="227310">Going East!</option><option value="304212">Scandinavia</option><option value="531130">Vive la France !</option><option value="558244">Italia</option><option value="925580">Beyond the Baltic Sea</option><option value="933610">Krone Trailer Pack</option><option value="1056760">Road to the Black Sea</option><option value="1209460">Iberia</option><option value="2004210">West Balkans</option></select>
+</div>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="eventLanguage">
+Language
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<select name="language" id="eventLanguage" class="form-control">
+<option value="1">English</option>
+<option value="2">German</option>
+<option value="4">Turkish</option>
+<option value="5">Norwegian</option>
+<option value="6">Spanish</option>
+<option value="7">Dutch</option>
+<option value="8">Polish</option>
+<option value="9">Russian</option>
+<option value="10">French</option>
+<option value="12">Lithuanian</option>
+<option value="13">Portuguese</option>
+<option value="14">Romanian</option>
+<option value="15">Czech</option>
+<option value="16">Italian</option>
+<option value="17">Slovak</option>
+<option value="18">Chinese (Simplified)</option>
+ <option value="19">Swedish</option>
+<option value="20">Danish</option>
+<option value="21">Finnish</option>
+<option value="22">Bulgarian</option>
+<option value="23">Greek</option>
+<option value="24">Latvian</option>
+<option value="25">Georgian</option>
+<option value="26">Persian</option>
+<option value="27">Hungarian</option>
+<option value="28">Korean</option>
+<option value="29">Arabic</option>
+<option value="30">Indonesian</option>
+<option value="31">Hindi</option>
+<option value="32">Ukrainian</option>
+<option value="33">Japanese</option>
+<option value="34">Belarusian</option>
+<option value="35">Chinese (Traditional)</option>
+</select>
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<label for="eventInfo">
+Information
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<textarea name="info" id="eventInfo" class="form-control insert-editor-here" rows="4" style="display: none;"></textarea><div class="EasyMDEContainer"><div class="editor-toolbar"><button class="bold" type="button" title="Bold (Ctrl-B)" tabindex="-1"><i class="fa fa-bold"></i></button><button class="italic" type="button" title="Italic (Ctrl-I)" tabindex="-1"><i class="fa fa-italic"></i></button><i class="separator">|</i><button class="heading-1 header-1" type="button" title="Big Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><button class="heading-2 header-2" type="button" title="Medium Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><button class="heading-3 header-3" type="button" title="Small Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><i class="separator">|</i><button class="code" type="button" title="Code (Ctrl-Alt-C)" tabindex="-1"><i class="fa fa-code"></i></button><button class="quote" type="button" title="Quote (Ctrl-&#39;)" tabindex="-1"><i class="fa fa-quote-left"></i></button><button class="unordered-list" type="button" title="Generic List (Ctrl-L)" tabindex="-1"><i class="fa fa-list-ul"></i></button><button class="ordered-list" type="button" title="Numbered List (Ctrl-Alt-L)" tabindex="-1"><i class="fa fa-list-ol"></i></button><i class="separator">|</i><button class="link" type="button" title="Create Link (Ctrl-K)" tabindex="-1"><i class="fa fa-link"></i></button><button class="image" type="button" title="Insert Image (Ctrl-Alt-I)" tabindex="-1"><i class="fa fa-image"></i></button><button class="horizontal-rule" type="button" title="Insert Horizontal Line" tabindex="-1"><i class="fa fa-minus"></i></button><i class="separator">|</i><button class="preview no-disable" type="button" title="Toggle Preview (Ctrl-P)" tabindex="-1"><i class="fa fa-eye"></i></button><button class="side-by-side no-disable no-mobile" type="button" title="Toggle Side by Side (F9)" tabindex="-1"><i class="fa fa-columns"></i></button><button class="fullscreen no-disable no-mobile" type="button" title="Toggle Fullscreen (F11)" tabindex="-1"><i class="fa fa-arrows-alt"></i></button><i class="separator">|</i><button class="guide no-disable" type="button" title="Markdown Guide" tabindex="-1"><i class="fa fa-question-circle"></i></button></div><div class="CodeMirror cm-s-easymde CodeMirror-wrap CodeMirror-empty"><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="min-height: 300px;"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 33px; min-height: 28px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><pre class="CodeMirror-placeholder CodeMirror-line-like" style="height: 0px; overflow: visible; direction: ltr;">Type here...</pre><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation" contenteditable="true" autocorrect="off" autocapitalize="off" spellcheck="true" tabindex="0"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 28px;"></div><div class="CodeMirror-gutters" style="display: none; height: 61px;"></div></div></div><div class="editor-preview-side editor-preview"></div><div class="editor-statusbar"><span class="lines">1</span><span class="words">0</span><span class="characters">0</span></div></div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<label for="eventRules">Rules</label>
+<p class="autolink">
+The provided rules will only be displayed if the event has an approved event server request.
+</p>
+<textarea name="rules" id="eventRules" class="form-control insert-editor-here" rows="4" style="display: none;"></textarea><div class="EasyMDEContainer"><div class="editor-toolbar"><button class="bold" type="button" title="Bold (Ctrl-B)" tabindex="-1"><i class="fa fa-bold"></i></button><button class="italic" type="button" title="Italic (Ctrl-I)" tabindex="-1"><i class="fa fa-italic"></i></button><i class="separator">|</i><button class="heading-1 header-1" type="button" title="Big Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><button class="heading-2 header-2" type="button" title="Medium Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><button class="heading-3 header-3" type="button" title="Small Heading" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><i class="separator">|</i><button class="code" type="button" title="Code (Ctrl-Alt-C)" tabindex="-1"><i class="fa fa-code"></i></button><button class="quote" type="button" title="Quote (Ctrl-&#39;)" tabindex="-1"><i class="fa fa-quote-left"></i></button><button class="unordered-list" type="button" title="Generic List (Ctrl-L)" tabindex="-1"><i class="fa fa-list-ul"></i></button><button class="ordered-list" type="button" title="Numbered List (Ctrl-Alt-L)" tabindex="-1"><i class="fa fa-list-ol"></i></button><i class="separator">|</i><button class="link" type="button" title="Create Link (Ctrl-K)" tabindex="-1"><i class="fa fa-link"></i></button><button class="image" type="button" title="Insert Image (Ctrl-Alt-I)" tabindex="-1"><i class="fa fa-image"></i></button><button class="horizontal-rule" type="button" title="Insert Horizontal Line" tabindex="-1"><i class="fa fa-minus"></i></button><i class="separator">|</i><button class="preview no-disable" type="button" title="Toggle Preview (Ctrl-P)" tabindex="-1"><i class="fa fa-eye"></i></button><button class="side-by-side no-disable no-mobile" type="button" title="Toggle Side by Side (F9)" tabindex="-1"><i class="fa fa-columns"></i></button><button class="fullscreen no-disable no-mobile" type="button" title="Toggle Fullscreen (F11)" tabindex="-1"><i class="fa fa-arrows-alt"></i></button><i class="separator">|</i><button class="guide no-disable" type="button" title="Markdown Guide" tabindex="-1"><i class="fa fa-question-circle"></i></button></div><div class="CodeMirror cm-s-easymde CodeMirror-wrap CodeMirror-empty"><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="min-height: 300px;"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 33px; min-height: 28px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><pre class="CodeMirror-placeholder CodeMirror-line-like" style="height: 0px; overflow: visible; direction: ltr;">Type here...</pre><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation" contenteditable="true" autocorrect="off" autocapitalize="off" spellcheck="true" tabindex="0"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 28px;"></div><div class="CodeMirror-gutters" style="display: none; height: 61px;"></div></div></div><div class="editor-preview-side editor-preview"></div><div class="editor-statusbar"><span class="lines">1</span><span class="words">0</span><span class="characters">0</span></div></div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<label for="header_image">Banner Image</label>
+<div class="alert alert-danger" id="header_image_error_message" style="display: none;">
+<strong>This file is bigger than 1 MB!</strong> Please choose another one.
+</div>
+<label class="input input-file">
+<div class="button">
+<input name="header_image" id="header_image" type="file" accept="image/gif,image/jpeg,image/png" data-max-size="1048576">Browse
+</div>
+<input type="text" id="header_image_filename" readonly="">
+</label>
+<small><strong>Accepted file types:</strong> gif, jpeg, jpg, png · <span id="header_image_error"><strong>Max file size</strong> 1 MB</span> ·
+<strong>Minimum size:</strong> 1920x500
+</small>
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<label for="map_image">Route Image</label>
+<div class="alert alert-danger" id="map_image_error_message" style="display: none;">
+ <strong>This file is bigger than 1 MB!</strong> Please choose another one.
+</div>
+<label class="input input-file">
+<div class="button">
+<input name="map_image" id="map_image" type="file" accept="image/gif,image/jpeg,image/png" data-max-size="1048576">Browse
+</div>
+<input type="text" id="map_image_filename" readonly="">
+</label>
+<small>
+<strong>Accepted file types:</strong> gif, jpeg, jpg, png · <span id="map_image_error"><strong>Max file size</strong> 1 MB</span>
+</small>
+</div>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label for="eventVoiceLink">Voice Link (Discord, TeamSpeak, …)</label>
+<input type="text" name="voiceLink" id="eventVoiceLink" class="form-control" value="">
+</div>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label for="eventExternalLink">External Link (event website, …)</label>
+<input type="text" name="externalLink" id="eventExternalLink" class="form-control" value="">
+</div>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label for="eventVisibility">
+Visibility
+<span data-toggle="tooltip" title="" data-original-title="This field is required">*</span>
+</label>
+<select name="visibility" id="eventVisibility" class="form-control">
+<option value="draft">
+Draft
+</option>
+<option value="public">
+Public
+</option>
+<option value="private">
+Private (VTC Members Only)
+</option>
+</select>
+</div>
+</div>
+<div class="col-md-12">
+<div class="alert alert-info">
+By submitting an event you agree to the <a href="https://truckersmp.com/kb/1139" target="_blank">event rules</a>.
+Your event may be deleted at any time, with no warning if the rules are broken. Depending on the
+situation we may revoke your access to create events.
+</div>
+<div class="form-group">
+<label class="checkbox">
+<input type="checkbox" name="agreement">
+<i></i> I agree with the statement above
+</label>
+</div>
+</div>
+<div class="col-md-12 visibility-warning" style="display: none;">
+<div class="alert alert-warning mt-2">
+Be aware that you will not be able to change the visibility back to Draft or Private after publishing.
+</div>
+</div>
+<div class="col-md-12 draft-visibility-warning" style="display: none;">
+<div class="alert alert-warning mt-2">
+Be aware that you will not be able to change the visibility back to Draft after submitting.
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<button type="submit" id="eventSubmit" class="btn btn-primary btn-block margin-top-20">Save Event as Draft</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+<div class="footer-v1">
+<div class="footer">
+<div class="container">
+<div class="row">
+
+<div class="col-md-3 md-margin-bottom-40 visible-md-block visible-lg-block">
+<br>
+<a href="https://truckersmp.com/"><img id="logo-footer" class="footer-logo" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/avatar.png" alt=""></a>
+</div>
+
+
+<div class="col-md-3 md-margin-bottom-40">
+<div class="posts">
+<div class="headline"><h2>Latest News</h2></div>
+<ul class="list-unstyled latest-list">
+<li>
+<a href="https://truckersmp.com/blog/283">Patron &amp; Supporters Convoy - Saturday 7th January 2023</a>
+<small>04 Jan 19:17 UTC</small>
+</li>
+<li>
+<a href="https://truckersmp.com/blog/281">Christmas Convoy 2022</a>
+<small>10 Dec 2022 15:45 UTC</small>
+</li>
+<li>
+<a href="https://truckersmp.com/blog/280">Introducing the New TruckersMP Launcher</a>
+<small>18 Nov 2022 15:25 UTC</small>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="col-md-3 md-margin-bottom-40">
+<div class="headline"><h2>Useful Links</h2></div>
+<ul class="list-unstyled link-list">
+<li><a href="https://truckersmp.com/download">Download</a> <i class="fas fa-angle-right"></i></li>
+<li><a href="https://truckersmp.com/support">Support</a> <i class="fas fa-angle-right"></i></li>
+<li><a href="https://forum.truckersmp.com/">Forum</a> <i class="fas fa-angle-right"></i></li>
+<li><a href="https://truckersmp.com/status">Server Status</a> <i class="fas fa-angle-right"></i></li>
+<li><a href="https://truckersmp.com/team">Meet the Team</a> <i class="fas fa-angle-right"></i></li>
+<li>
+<a href="https://truckersmp.com/recruitment">Join the Team</a>
+<i class="fas fa-angle-right"></i>
+</li>
+</ul>
+</div>
+
+
+<div class="col-md-3 md-margin-bottom-40">
+<div class="headline"><h2>Support TruckersMP</h2></div>
+<div class="text-center">
+<div class="text-white margin-bottom-10">
+If you like our work and want to help support our game servers, website or domain,
+please consider becoming a Patron or donating. Every donation helps us to improve your
+experience on our platform.
+</div>
+<a href="https://www.patreon.com/bePatron?u=16310284" class="btn-u btn-u-patreon rounded-4x mt-1 px-4 py-3" target="_blank" rel="noreferrer nofollow noopener">
+<i class="fab fa-patreon"></i> Become a patron
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-9 col-xs-12">
+<p>
+2023 © All Rights Reserved.
+<a href="https://truckersmp.com/policy">Privacy Policy</a> |
+<a href="https://truckersmp.com/terms">Terms of Service</a> |
+<a href="https://truckersmp.com/rules">Rules</a> |
+<a href="https://truckersmp.com/code-of-conduct">Code of Conduct</a> |
+<a href="https://truckersmpstatus.com/" target="_blank">Platform Status</a> |
+<i class="fas fa-rss" style="color: #ee802f;padding-left: 2px;"></i> <a href="https://truckersmp.com/blog/rss">RSS</a> |
+<a href="https://truckersmp.com/vtc/48336/events/create#" id="consent-manager">Consent Manager</a>
+</p>
+</div>
+
+<div class="col-md-3 col-xs-12">
+<ul class="footer-socials list-inline">
+<li>
+<a href="https://discord.gg/truckersmp?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Discord">
+<i class="fab fa-discord"></i>
+</a>
+</li>
+<li>
+<a href="https://www.twitch.tv/TruckersMP_Official?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitch">
+<i class="fab fa-twitch"></i>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/TruckersMPOfficial?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="YouTube">
+<i class="fab fa-youtube"></i>
+</a>
+</li>
+<li>
+<a href="https://www.instagram.com/truckersmp.official?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/truckersmpofficial?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/truckersmp?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://github.com/truckersmp?ref=truckersmp.com" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/jquery.min.js.Без названия"></script>
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/bootstrap.min.js.Без названия"></script>
+
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/back-to-top.js.Без названия"></script>
+
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/custom.js.Без названия"></script>
+
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/app.js.Без названия"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    App.init()
+  })
+</script>
+<!--[if lt IE 9]>
+<script src="/assets/plugins/respond.js"></script>
+<script src="/assets/plugins/html5shiv.js"></script>
+<script src="/assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+<script type="text/javascript">$.ajaxSetup({ headers: { 'X-CSRF-Token': $('meta[name=csrf-token]').attr('content') } })</script>
+<script type="text/javascript" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/app.js(1).Без названия"></script>
+<script src="./Virtual Trucking Company — Event — Create — TruckersMP_files/cannedmessages.js.Без названия"></script>
+<script src="./Virtual Trucking Company — Event — Create — TruckersMP_files/easymde.common.js.Без названия"></script>
+<script src="./Virtual Trucking Company — Event — Create — TruckersMP_files/flatpickr.min.js.Без названия"></script>
+<script src="./Virtual Trucking Company — Event — Create — TruckersMP_files/events.js.Без названия"></script><div class="flatpickr-calendar hasTime animate" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month flatpickr-disabled"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><select class="flatpickr-monthDropdown-months" tabindex="-1"><option class="flatpickr-monthDropdown-month" value="1" tabindex="-1">February</option><option class="flatpickr-monthDropdown-month" value="2" tabindex="-1">March</option><option class="flatpickr-monthDropdown-month" value="3" tabindex="-1">April</option><option class="flatpickr-monthDropdown-month" value="4" tabindex="-1">May</option><option class="flatpickr-monthDropdown-month" value="5" tabindex="-1">June</option><option class="flatpickr-monthDropdown-month" value="6" tabindex="-1">July</option><option class="flatpickr-monthDropdown-month" value="7" tabindex="-1">August</option><option class="flatpickr-monthDropdown-month" value="8" tabindex="-1">September</option><option class="flatpickr-monthDropdown-month" value="9" tabindex="-1">October</option><option class="flatpickr-monthDropdown-month" value="10" tabindex="-1">November</option><option class="flatpickr-monthDropdown-month" value="11" tabindex="-1">December</option></select><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year" min="2023"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
+      <span class="flatpickr-weekday">
+        Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
+      </span>
+      </div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day prevMonthDay flatpickr-disabled" aria-label="January 29, 2023">29</span><span class="flatpickr-day prevMonthDay flatpickr-disabled" aria-label="January 30, 2023">30</span><span class="flatpickr-day prevMonthDay flatpickr-disabled" aria-label="January 31, 2023">31</span><span class="flatpickr-day flatpickr-disabled" aria-label="February 1, 2023">1</span><span class="flatpickr-day today" aria-label="February 2, 2023" aria-current="date" tabindex="-1">2</span><span class="flatpickr-day " aria-label="February 3, 2023" tabindex="-1">3</span><span class="flatpickr-day " aria-label="February 4, 2023" tabindex="-1">4</span><span class="flatpickr-day " aria-label="February 5, 2023" tabindex="-1">5</span><span class="flatpickr-day " aria-label="February 6, 2023" tabindex="-1">6</span><span class="flatpickr-day " aria-label="February 7, 2023" tabindex="-1">7</span><span class="flatpickr-day " aria-label="February 8, 2023" tabindex="-1">8</span><span class="flatpickr-day " aria-label="February 9, 2023" tabindex="-1">9</span><span class="flatpickr-day " aria-label="February 10, 2023" tabindex="-1">10</span><span class="flatpickr-day " aria-label="February 11, 2023" tabindex="-1">11</span><span class="flatpickr-day " aria-label="February 12, 2023" tabindex="-1">12</span><span class="flatpickr-day " aria-label="February 13, 2023" tabindex="-1">13</span><span class="flatpickr-day " aria-label="February 14, 2023" tabindex="-1">14</span><span class="flatpickr-day " aria-label="February 15, 2023" tabindex="-1">15</span><span class="flatpickr-day " aria-label="February 16, 2023" tabindex="-1">16</span><span class="flatpickr-day " aria-label="February 17, 2023" tabindex="-1">17</span><span class="flatpickr-day " aria-label="February 18, 2023" tabindex="-1">18</span><span class="flatpickr-day " aria-label="February 19, 2023" tabindex="-1">19</span><span class="flatpickr-day " aria-label="February 20, 2023" tabindex="-1">20</span><span class="flatpickr-day " aria-label="February 21, 2023" tabindex="-1">21</span><span class="flatpickr-day " aria-label="February 22, 2023" tabindex="-1">22</span><span class="flatpickr-day " aria-label="February 23, 2023" tabindex="-1">23</span><span class="flatpickr-day " aria-label="February 24, 2023" tabindex="-1">24</span><span class="flatpickr-day " aria-label="February 25, 2023" tabindex="-1">25</span><span class="flatpickr-day " aria-label="February 26, 2023" tabindex="-1">26</span><span class="flatpickr-day " aria-label="February 27, 2023" tabindex="-1">27</span><span class="flatpickr-day " aria-label="February 28, 2023" tabindex="-1">28</span><span class="flatpickr-day nextMonthDay" aria-label="March 1, 2023" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="March 2, 2023" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="March 3, 2023" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="March 4, 2023" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="March 5, 2023" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="March 6, 2023" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="March 7, 2023" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="March 8, 2023" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="March 9, 2023" tabindex="-1">9</span><span class="flatpickr-day nextMonthDay" aria-label="March 10, 2023" tabindex="-1">10</span><span class="flatpickr-day nextMonthDay" aria-label="March 11, 2023" tabindex="-1">11</span></div></div></div></div><div class="flatpickr-time time24hr" tabindex="-1"><div class="numInputWrapper"><input class="numInput flatpickr-hour" type="number" aria-label="Hour" tabindex="-1" step="1" min="0" max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span><div class="numInputWrapper"><input class="numInput flatpickr-minute" type="number" aria-label="Minute" tabindex="-1" step="5" min="0" max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div>
+<div id="loader-modal">
+<i class="fas fa-circle-notch fa-spin"></i>
+</div>
+<script defer="" src="./Virtual Trucking Company — Event — Create — TruckersMP_files/consent-manager.js.Без названия"></script>
+
+
+<div id="klaro" style="--notice-left:20px; --notice-right:auto;"><div lang="en" class="klaro"><div></div></div></div><div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 1; cursor: pointer;"></div></body></html>
