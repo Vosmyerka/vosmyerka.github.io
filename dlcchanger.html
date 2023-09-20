@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img\tab_icon.png">
+    <title>Vosmyerka | DLCChanger</title>
+</head>
+<body>
+    <header>
+        <h1>DLC Changer</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <nav class="breadcrumb">
+        <a href="index.html">Home</a> /
+        <a href="truckersmp.html">TruckersMP</a> /
+        <a href="dlcchanger.html">DLCChanger</a>/
+    </nav>
+
+    <a href="https://github.com/Vosmyerka/DLC_Changer/releases" class="download-button" target="_blank">Download</a>  
+    
+    <main>
+        <section class="program-details">
+            <h2>DLCChanger</h2>
+            <p>Those who participate in Convoy Control on the TruckersMP project know that initially, in order to disable certain DLCs in Euro Truck Simulator 2, you need to go to the properties of the game in Steam, find the necessary DLCs and disable them, after which they are deleted from the files. And in order to get the DLCs back after the event they have to be downloaded again.</p>
+
+            <p>Convoy Control often has to disable unused DLCs in a game profile specially created for the event, otherwise, when entering the game, there will be an unsynchronization and the profile will have to be set again since the saves will not work.</p>
+
+            <p>This program developed in the PowerShell language makes it very easy to disable DLCs for several reasons:</p>
+
+            <ol>
+                <li>In order to make the game profile work properly, all you need to do is disable the DLCs that are responsible for the map expansion</li>
+                <li>Steam does not disable DLCs, instead it deletes them, while this program moves them to a user-selected directory</li>
+                <li>If you want to manually transfer DLCs from the game directory to some other folder, you will encounter incomplete DLC names in .scs format. Most often it is an abbreviation, or the first 2 letters of the DLC name. This program translates those incomprehensible titles into full DLC titles from the Steam store</li>
+            </ol>
+            <hr>
+            <h2>Instructions</h2>
+
+            <ol>
+                <li>After launching the program, you will need to select two directories. In the first input field on the left side of the program, enter the full path to the directory where the game is installed. In my case, it is <code>C:\SteamLibrary\steamapps\common\Euro Truck Simulator 2</code>.</li>
+                <li>In the second input field on the right side of the program, enter the path to the folder where the disabled DLCs will be stored. In my case, it is <code>C:\Users\Vosmyerka\Desktop\ETS2 DLC</code>.</li>
+                <li>Once all directories have been specified, click the button in the middle labeled <code>Save Directories</code>, and your specified directories will be saved to the <code>directories.txt</code> file.</li>
+                <li>From this point on, all map expansion DLCs you have should appear in the left window. All you need to do is select the DLCs you want to disable and click the <code>Turn DLCs OFF</code> button.</li>
+                <li>To return DLCs to the game folder, select the DLCs you want to restore in the right window and click the <code>Turn DLCs ON</code> button.</li>
+                <li>To select multiple items from the list, hold down the <code>Ctrl</code> key while clicking with the left mouse button.</li>
+            </ol>
+
+            <p><strong>Attention! When you reboot your computer or update the game, Steam may reinstall missing DLCs. Be attentive and disable them just before launching the game.</strong></p>
+            <hr>
+        </section>
+
+        <section class="image-section">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="img/dlcchanger_demo.png" alt="Image Description" class="rounded-image" onclick="zoomImage(this)">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Vosmyerka</p>
+    </footer>
+</body>
+</html>
